@@ -78909,6 +78909,34 @@
             "deprecationReason": null
           },
           {
+            "name": "codeIntelligenceEnabled",
+            "description": "[INTERNAL] Whether code intelligence is enabled for the organization.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "codeIntelligenceRepository",
+            "description": "[INTERNAL] GitHub repository in owner/repo format for code intelligence.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "createdAt",
             "description": "The time at which the entity was created.",
             "args": [],
@@ -81843,6 +81871,18 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "agentGuidanceRole",
+            "description": "The minimum role required to manage agent guidance prompts and settings.",
+            "type": {
+              "kind": "ENUM",
+              "name": "UserRoleType",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "apiSettingsRole",
             "description": "The minimum role required to manage API settings.",
             "type": {
@@ -82106,6 +82146,30 @@
                   "ofType": null
                 }
               }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "codeIntelligenceEnabled",
+            "description": "[INTERNAL] Whether code intelligence is enabled for the organization.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "codeIntelligenceRepository",
+            "description": "[INTERNAL] GitHub repository in owner/repo format for code intelligence.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "defaultValue": null,
             "isDeprecated": false,

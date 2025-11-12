@@ -22263,6 +22263,14 @@ type Organization implements Node {
   """
   archivedAt: DateTime
   """
+  [INTERNAL] Whether code intelligence is enabled for the organization.
+  """
+  codeIntelligenceEnabled: Boolean!
+  """
+  [INTERNAL] GitHub repository in owner/repo format for code intelligence.
+  """
+  codeIntelligenceRepository: String
+  """
   The time at which the entity was created.
   """
   createdAt: DateTime!
@@ -23075,6 +23083,10 @@ type OrganizationPayload {
 
 input OrganizationSecuritySettingsInput {
   """
+  The minimum role required to manage agent guidance prompts and settings.
+  """
+  agentGuidanceRole: UserRoleType
+  """
   The minimum role required to manage API settings.
   """
   apiSettingsRole: UserRoleType
@@ -23151,6 +23163,14 @@ input OrganizationUpdateInput {
   Allowed file upload content types.
   """
   allowedFileUploadContentTypes: [String!]
+  """
+  [INTERNAL] Whether code intelligence is enabled for the organization.
+  """
+  codeIntelligenceEnabled: Boolean
+  """
+  [INTERNAL] GitHub repository in owner/repo format for code intelligence.
+  """
+  codeIntelligenceRepository: String
   """
   [INTERNAL] Configuration settings for the Customers feature.
   """

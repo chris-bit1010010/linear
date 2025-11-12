@@ -12550,6 +12550,10 @@ export type Organization = Node & {
   allowedFileUploadContentTypes?: Maybe<Array<Scalars["String"]>>;
   /** The time at which the entity was archived. Null if the entity has not been archived. */
   archivedAt?: Maybe<Scalars["DateTime"]>;
+  /** [INTERNAL] Whether code intelligence is enabled for the organization. */
+  codeIntelligenceEnabled: Scalars["Boolean"];
+  /** [INTERNAL] GitHub repository in owner/repo format for code intelligence. */
+  codeIntelligenceRepository?: Maybe<Scalars["String"]>;
   /** The time at which the entity was created. */
   createdAt: Scalars["DateTime"];
   /** Aproximate number of issues in the organization, including archived ones. */
@@ -13007,6 +13011,8 @@ export type OrganizationPayload = {
 };
 
 export type OrganizationSecuritySettingsInput = {
+  /** The minimum role required to manage agent guidance prompts and settings. */
+  agentGuidanceRole?: InputMaybe<UserRoleType>;
   /** The minimum role required to manage API settings. */
   apiSettingsRole?: InputMaybe<UserRoleType>;
   /** The minimum role required to import data. */
@@ -13051,6 +13057,10 @@ export type OrganizationUpdateInput = {
   allowedAuthServices?: InputMaybe<Array<Scalars["String"]>>;
   /** Allowed file upload content types. */
   allowedFileUploadContentTypes?: InputMaybe<Array<Scalars["String"]>>;
+  /** [INTERNAL] Whether code intelligence is enabled for the organization. */
+  codeIntelligenceEnabled?: InputMaybe<Scalars["Boolean"]>;
+  /** [INTERNAL] GitHub repository in owner/repo format for code intelligence. */
+  codeIntelligenceRepository?: InputMaybe<Scalars["String"]>;
   /** [INTERNAL] Configuration settings for the Customers feature. */
   customersConfiguration?: InputMaybe<Scalars["JSONObject"]>;
   /** [INTERNAL] Whether the organization is using customers. */
